@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     
     var authenticated = false
 
-    @IBOutlet var lblErrorMsg : UILabel = nil
-    @IBOutlet var texBoxExmail : UITextField = nil
-    @IBOutlet var btnRegisterDevice : UIButton = nil
-    @IBOutlet var btnCancelRegisterDevice : UIButton = nil
-    @IBOutlet var devRegisterView : UIView = nil
+    @IBOutlet var lblErrorMsg : UILabel! = nil
+    @IBOutlet var texBoxExmail : UITextField! = nil
+    @IBOutlet var btnRegisterDevice : UIButton! = nil
+    @IBOutlet var btnCancelRegisterDevice : UIButton! = nil
+    @IBOutlet var devRegisterView : UIView! = nil
     
     
     
@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         let reg = Registration()
         let success = reg.checkIfRegistered()
-        authenticated = success
         if(success){
             self.performSegueWithIdentifier("MainViewSegue", sender: self)
         }

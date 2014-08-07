@@ -5,7 +5,7 @@
 //  Created by Nikola Tonkev on 2014-06-08.
 //  Copyright (c) 2014 nousdynamics.com. All rights reserved.
 //
-
+//Obsolid this class is not in use anymore
 import CoreData
 
 class CoreDataHelper{
@@ -75,3 +75,16 @@ class CoreDataHelper{
     }
 }
 
+/*
+var cdh: CoreDataHelper {
+if !_cdh {
+    _cdh = CoreDataHelper()
+    }
+    return _cdh!
+}
+var _cdh: CoreDataHelper? = nil
+
+func getDataHelper() -> CoreDataHelper {
+    return self.cdh
+}
+*/

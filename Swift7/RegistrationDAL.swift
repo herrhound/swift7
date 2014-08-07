@@ -6,58 +6,52 @@
 //  Copyright (c) 2014 nousdynamics.com. All rights reserved.
 //
 
-import CoreData
-
 class RegistrationDAL: BaseDAL {
-
+    
+    override init(){
+        super.init()
+    }
+    
     func registrationExists() -> Bool {
-        var error: NSError? = nil
-        var fReq: NSFetchRequest = NSFetchRequest(entityName: "RegEntity")
-        let result: Int = self.cdh.managedObjectContext.countForFetchRequest(fReq, error:&error)
-        if(!error){
-            return result > 0
+        let opened = openDatabase()
+        if(opened){
+            let sql: String = "Select skey as cnt From Settings Where skey='AuthToken2'"
+            let result = processSelectStatement(sql)
+            let exists: Bool = !result.isEmpty
+            closeDatabase();
+            return exists
         }
-        else
-        {
+        else {
             return false
         }
     }
     
+    func getAllSettings() -> Array<Settings> {
+        let opened = openDatabase()
+        if(opened){
+            let sql: String = "Select * From Settings Where skey=''"
+            let result = processSelectStatement(sql)
+            let array = result as Array<Settings>
+            closeDatabase();
+            return array
+        }
+        else {
+            return []
+        }
+    
+    }
+    
     func register() -> Bool {
-        var newItem = NSEntityDescription.insertNewObjectForEntityForName("RegEntity", inManagedObjectContext: self.cdh.managedObjectContext) as NSManagedObject
-        
-        newItem.setValue("dssfsdf", forKey: "authguid")
-        newItem.setValue("asdadasda", forKey: "deviceuid")
-        self.cdh.saveContext()
         return true
     }
     
     
     func deleteRegistration() -> Bool {
-        var error: NSError? = nil
-        var fReq: NSFetchRequest = NSFetchRequest(entityName: "RegEntity")
-        var models: NSArray = self.cdh.managedObjectContext.executeFetchRequest(fReq, error:&error)
-        for entity: AnyObject in models {
-           let obj = entity as NSManagedObject
-           self.cdh.managedObjectContext.deleteObject(obj)
-        }
-        self.cdh.saveContext()
         return true
     }
     
     func showRegistration() -> AnyObject? {
-        let dal = RegistrationDAL()
-        var error: NSError? = nil
-        var fReq: NSFetchRequest = NSFetchRequest(entityName: "RegEntity")
-        var models: NSArray = self.cdh.managedObjectContext.executeFetchRequest(fReq, error:&error)
-        if(models.count > 0)
-        {
-            return models.firstObject
-        }
-        else
-        {
-            return nil
-        }
+        return nil
     }
     
     

@@ -13,7 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
-    var dal = RegistrationDAL()
+    //var dal = RegistrationDAL()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
@@ -42,12 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         //self.saveContext()
-        dal.getDataHelper()
-        dal.cdh.saveContext()
+        //dal.getDataHelper()
+        //dal.cdh.saveContext()
     }
 
     
-    
+    /*
     func saveContext () {
         var error: NSError? = nil
         let managedObjectContext = self.managedObjectContext
@@ -60,10 +60,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    */
 
     // #pragma mark - Core Data stack
-   
+    /*
     // Returns the managed object context for the application.
     // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
     var managedObjectContext: NSManagedObjectContext {
@@ -112,6 +112,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.endIndex-1] as NSURL
     }
-
+    */
 }
 

@@ -10,9 +10,9 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet var lblRegInfo : UILabel = nil
-    @IBOutlet var btnDeleteRegistration : UIButton = nil
-    @IBOutlet var btnShowRegistration : UIButton = nil
+    @IBOutlet var lblRegInfo : UILabel! = nil
+    @IBOutlet var btnDeleteRegistration : UIButton! = nil
+    @IBOutlet var btnShowRegistration : UIButton! = nil
     
     @IBAction func btnDeleteRegistrationTouchUpInside(sender : AnyObject) {
         let reg = Registration()
@@ -27,6 +27,7 @@ class MainViewController: UIViewController {
     
     
     @IBAction func btnShowRegistrationTouchUpInside(sender : AnyObject) {
+        /*
         let reg = Registration()
         let entity = reg.showRegistration()
         if(entity != nil){
@@ -36,6 +37,7 @@ class MainViewController: UIViewController {
         else{
             lblRegInfo.text = "No reggistration found!"
         }
+*/
     }
     
     override func viewDidLoad() {

@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F116735F1945261C0087A152 /* RegEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116735E1945261C0087A152 /* RegEntity.swift */; };
-		F1167361194531300087A152 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1167360194531300087A152 /* CoreDataHelper.swift */; };
 		F11673631945334F0087A152 /* RegistrationDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11673621945334F0087A152 /* RegistrationDAL.swift */; };
-		F116736519453C830087A152 /* Swift7.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F116736419453C830087A152 /* Swift7.sqlite */; };
 		F116736719455B2F0087A152 /* BaseDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116736619455B2F0087A152 /* BaseDAL.swift */; };
+		F15455911954680200775D0B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F15455901954680200775D0B /* libsqlite3.dylib */; };
+		F154559419546DEF00775D0B /* SqliteDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F154559219546DEF00775D0B /* SqliteDatabase.m */; };
+		F1545597195550A500775D0B /* PBaseDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1545596195550A500775D0B /* PBaseDAL.swift */; };
 		F15B2AED19440395006DD4E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15B2AEC19440395006DD4E0 /* AppDelegate.swift */; };
-		F15B2AF019440395006DD4E0 /* Swift7.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F15B2AEE19440395006DD4E0 /* Swift7.xcdatamodeld */; };
+		F15B2AF019440395006DD4E0 /* Swift7BKP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F15B2AEE19440395006DD4E0 /* Swift7BKP.xcdatamodeld */; };
 		F15B2AF219440395006DD4E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15B2AF119440395006DD4E0 /* ViewController.swift */; };
 		F15B2AF519440395006DD4E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15B2AF319440395006DD4E0 /* Main.storyboard */; };
 		F15B2AF719440395006DD4E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15B2AF619440395006DD4E0 /* Images.xcassets */; };
 		F15B2B0319440395006DD4E0 /* Swift7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15B2B0219440395006DD4E0 /* Swift7Tests.swift */; };
 		F15B2B121944DF73006DD4E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15B2B111944DF73006DD4E0 /* MainViewController.swift */; };
 		F15B2B151944EE4B006DD4E0 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15B2B141944EE4B006DD4E0 /* Registration.swift */; };
-		F1923A47194873F300BFF667 /* RegEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F1923A46194873F300BFF667 /* RegEntity.m */; };
+		F16DD596194D3B6A00B41241 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DD595194D3B6A00B41241 /* Settings.swift */; };
+		F16DD59C194E9AB800B41241 /* Swift7.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F16DD59A194E9AB800B41241 /* Swift7.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,15 +35,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F116735E1945261C0087A152 /* RegEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegEntity.swift; sourceTree = "<group>"; };
-		F1167360194531300087A152 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		F11673621945334F0087A152 /* RegistrationDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationDAL.swift; sourceTree = "<group>"; };
-		F116736419453C830087A152 /* Swift7.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Swift7.sqlite; sourceTree = "<group>"; };
 		F116736619455B2F0087A152 /* BaseDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDAL.swift; sourceTree = "<group>"; };
+		F15455901954680200775D0B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F154559219546DEF00775D0B /* SqliteDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteDatabase.m; sourceTree = "<group>"; };
+		F154559319546DEF00775D0B /* SqliteDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteDatabase.h; sourceTree = "<group>"; };
+		F154559519546E1F00775D0B /* Swift7-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Swift7-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		F1545596195550A500775D0B /* PBaseDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBaseDAL.swift; sourceTree = "<group>"; };
 		F15B2AE719440395006DD4E0 /* Swift7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15B2AEB19440395006DD4E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F15B2AEC19440395006DD4E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F15B2AEF19440395006DD4E0 /* Swift7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift7.xcdatamodel; sourceTree = "<group>"; };
+		F15B2AEF19440395006DD4E0 /* Swift7BKP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift7BKP.xcdatamodel; sourceTree = "<group>"; };
 		F15B2AF119440395006DD4E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F15B2AF419440395006DD4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F15B2AF619440395006DD4E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -51,9 +54,8 @@
 		F15B2B0219440395006DD4E0 /* Swift7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift7Tests.swift; sourceTree = "<group>"; };
 		F15B2B111944DF73006DD4E0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F15B2B141944EE4B006DD4E0 /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
-		F1923A44194873F300BFF667 /* Swift7-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift7-Bridging-Header.h"; sourceTree = "<group>"; };
-		F1923A45194873F300BFF667 /* RegEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegEntity.h; sourceTree = "<group>"; };
-		F1923A46194873F300BFF667 /* RegEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegEntity.m; sourceTree = "<group>"; };
+		F16DD595194D3B6A00B41241 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F16DD59B194E9AB800B41241 /* Swift7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift7.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15455911954680200775D0B /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		F15B2ADE19440395006DD4E0 = {
 			isa = PBXGroup;
 			children = (
+				F15455901954680200775D0B /* libsqlite3.dylib */,
 				F15B2AE919440395006DD4E0 /* Swift7 */,
 				F15B2AFF19440395006DD4E0 /* Swift7Tests */,
 				F15B2AE819440395006DD4E0 /* Products */,
@@ -151,10 +155,8 @@
 		F15B2B0E1944046A006DD4E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F1923A45194873F300BFF667 /* RegEntity.h */,
-				F1923A46194873F300BFF667 /* RegEntity.m */,
-				F116735E1945261C0087A152 /* RegEntity.swift */,
-				F1923A44194873F300BFF667 /* Swift7-Bridging-Header.h */,
+				F154559519546E1F00775D0B /* Swift7-Bridging-Header.h */,
+				F16DD595194D3B6A00B41241 /* Settings.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -170,9 +172,9 @@
 		F15B2B10194404BF006DD4E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F116736419453C830087A152 /* Swift7.sqlite */,
-				F15B2AEE19440395006DD4E0 /* Swift7.xcdatamodeld */,
+				F15B2AEE19440395006DD4E0 /* Swift7BKP.xcdatamodeld */,
 				F15B2AF619440395006DD4E0 /* Images.xcassets */,
+				F16DD59A194E9AB800B41241 /* Swift7.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -180,10 +182,12 @@
 		F15B2B131944EE1A006DD4E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F154559219546DEF00775D0B /* SqliteDatabase.m */,
+				F154559319546DEF00775D0B /* SqliteDatabase.h */,
 				F15B2B141944EE4B006DD4E0 /* Registration.swift */,
-				F1167360194531300087A152 /* CoreDataHelper.swift */,
 				F11673621945334F0087A152 /* RegistrationDAL.swift */,
 				F116736619455B2F0087A152 /* BaseDAL.swift */,
+				F1545596195550A500775D0B /* PBaseDAL.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -268,7 +272,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F116736519453C830087A152 /* Swift7.sqlite in Resources */,
 				F15B2AF519440395006DD4E0 /* Main.storyboard in Resources */,
 				F15B2AF719440395006DD4E0 /* Images.xcassets in Resources */,
 			);
@@ -290,14 +293,15 @@
 			files = (
 				F15B2AF219440395006DD4E0 /* ViewController.swift in Sources */,
 				F15B2AED19440395006DD4E0 /* AppDelegate.swift in Sources */,
-				F116735F1945261C0087A152 /* RegEntity.swift in Sources */,
-				F1167361194531300087A152 /* CoreDataHelper.swift in Sources */,
+				F16DD59C194E9AB800B41241 /* Swift7.xcdatamodeld in Sources */,
 				F11673631945334F0087A152 /* RegistrationDAL.swift in Sources */,
-				F15B2AF019440395006DD4E0 /* Swift7.xcdatamodeld in Sources */,
+				F16DD596194D3B6A00B41241 /* Settings.swift in Sources */,
+				F15B2AF019440395006DD4E0 /* Swift7BKP.xcdatamodeld in Sources */,
 				F15B2B151944EE4B006DD4E0 /* Registration.swift in Sources */,
 				F15B2B121944DF73006DD4E0 /* MainViewController.swift in Sources */,
+				F1545597195550A500775D0B /* PBaseDAL.swift in Sources */,
+				F154559419546DEF00775D0B /* SqliteDatabase.m in Sources */,
 				F116736719455B2F0087A152 /* BaseDAL.swift in Sources */,
-				F1923A47194873F300BFF667 /* RegEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +373,7 @@
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift7-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -404,6 +409,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift7-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -415,9 +421,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Swift7/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Swift7/Swift7-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift7-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -430,9 +437,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Swift7/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Swift7/Swift7-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift7-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -506,12 +514,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F15B2AEE19440395006DD4E0 /* Swift7.xcdatamodeld */ = {
+		F15B2AEE19440395006DD4E0 /* Swift7BKP.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F15B2AEF19440395006DD4E0 /* Swift7.xcdatamodel */,
+				F15B2AEF19440395006DD4E0 /* Swift7BKP.xcdatamodel */,
 			);
-			currentVersion = F15B2AEF19440395006DD4E0 /* Swift7.xcdatamodel */;
+			currentVersion = F15B2AEF19440395006DD4E0 /* Swift7BKP.xcdatamodel */;
+			path = Swift7BKP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		F16DD59A194E9AB800B41241 /* Swift7.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F16DD59B194E9AB800B41241 /* Swift7.xcdatamodel */,
+			);
+			currentVersion = F16DD59B194E9AB800B41241 /* Swift7.xcdatamodel */;
 			path = Swift7.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

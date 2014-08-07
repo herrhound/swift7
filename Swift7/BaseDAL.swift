@@ -9,17 +9,58 @@
 import Foundation
 
 class BaseDAL {
-
-    var cdh: CoreDataHelper {
-    if !_cdh {
-        _cdh = CoreDataHelper()
+    var sqliteDatabase: SqliteDatabase
+/*
+    var applicationDocumentsDirectory: NSURL {
+        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        return urls[urls.endIndex-1] as NSURL
+    }
+*/
+    init(){
+        var applicationDocumentsDirectory: NSURL {
+        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+            return urls[urls.endIndex-1] as NSURL
         }
-        return _cdh!
-    }
-    var _cdh: CoreDataHelper? = nil
 
-    func getDataHelper() -> CoreDataHelper {
-        return self.cdh
+        let dbFileName: String = "Swift7.sqlite"
+        var dbPath = applicationDocumentsDirectory.URLByAppendingPathComponent(dbFileName).path
+        var bundle: NSBundle = NSBundle.mainBundle()
+        //var dbPath: NSString = bundle.resourcePath + "/" + dbFileName
+        self.sqliteDatabase = SqliteDatabase(path: dbPath)
     }
 
+    func processSelectStatement(let sql: String) -> Array<AnyObject> {
+        return sqliteDatabase.processSelectStatement(sql)
+    }
+
+    func processExecuteStatement(let sql: String) -> Bool
+    {
+        return sqliteDatabase.processExecuteStatement(sql)
+    }
+    /*
+    func lastInsertedRowID() -> Int32 {
+        return sqliteDatabase.lastInsertedRowID()
+    }
+    */
+    func openDatabase() -> Bool {
+        return sqliteDatabase.openDatabase()
+    }
+    
+    func closeDatabase() {
+        sqliteDatabase.closeDatabase()
+    }
+    
+    func beginTransaction() -> Bool {
+        return sqliteDatabase.beginTransaction()
+    }
+    
+    func commitTransaction() -> Bool {
+        return sqliteDatabase.commitTransaction()
+    }
+    
+    func rollbackTransaction() -> Bool
+    {
+        return sqliteDatabase.rollbackTransaction()
+    }
+    
 }

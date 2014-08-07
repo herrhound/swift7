@@ -10,24 +10,32 @@ import Foundation
 
 class Registration {
 
+    var dal: RegistrationDAL
+    
+    init(){
+        dal = RegistrationDAL()
+    }
+    
     func checkIfRegistered() -> Bool {
-        let dal = RegistrationDAL()
-        return dal.registrationExists();
+        return dal.registrationExists()
     }
     
     func register() -> Bool {
-        let dal = RegistrationDAL()
-        return dal.register()
+        //let dal = RegistrationDAL()
+        //return dal.register()
+        return true;
     }
     
     func deleteRegistration() -> Bool {
-        let dal = RegistrationDAL()
-        return dal.deleteRegistration()
+        //let dal = RegistrationDAL()
+        //return dal.deleteRegistration()
+        return true;
     }
     
     func showRegistration() -> AnyObject? {
-        let dal = RegistrationDAL()
-        return dal.showRegistration()
+        //let dal = RegistrationDAL()
+        //return dal.showRegistration()
+        return nil;
     }
     
 }
