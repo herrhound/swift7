@@ -20,16 +20,16 @@ class Registration {
         return dal.registrationExists()
     }
     
-    func register() -> Bool {
+    func register(let token:String) -> Bool {
         //let dal = RegistrationDAL()
-        //return dal.register()
-        return true;
+        return dal.register(token)
+        //return true;
     }
     
     func deleteRegistration() -> Bool {
         //let dal = RegistrationDAL()
-        //return dal.deleteRegistration()
-        return true;
+        return dal.deleteRegistration()
+        //return true;
     }
     
     func showRegistration() -> AnyObject? {

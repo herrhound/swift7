@@ -15,7 +15,7 @@ class RegistrationDAL: BaseDAL {
     func registrationExists() -> Bool {
         let opened = openDatabase()
         if(opened){
-            let sql: String = "Select skey as cnt From Settings Where skey='AuthToken2'"
+            let sql: String = "Select skey as cnt From Settings Where skey='AuthToken'"
             let result = processSelectStatement(sql)
             let exists: Bool = !result.isEmpty
             closeDatabase();
@@ -41,13 +41,31 @@ class RegistrationDAL: BaseDAL {
     
     }
     
-    func register() -> Bool {
-        return true
+    func register(let token: String) -> Bool {
+        let opened = openDatabase()
+        if(opened){
+            let sql: String = "Insert Into Settings(skey, svalue) Values('AuthToken', '" + token + "')"
+            let success = processExecuteStatement(sql)
+            closeDatabase();
+            return success
+        }
+        else {
+            return false
+        }
     }
     
     
     func deleteRegistration() -> Bool {
-        return true
+        let opened = openDatabase()
+        if(opened){
+            let sql: String = "Delete From Settings Where skey='AuthToken'"
+            let success = processExecuteStatement(sql)
+            closeDatabase();
+            return success
+        }
+        else {
+            return false
+        }
     }
     
     func showRegistration() -> AnyObject? {

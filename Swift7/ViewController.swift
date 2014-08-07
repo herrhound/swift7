@@ -77,7 +77,7 @@ class ViewController: UIViewController {
             
             self.lblErrorMsg.text = ""
             let reg = Registration()
-            return reg.register()
+            return reg.register("sdfsdfsdf-646dstwer645-34tert63256-terwt342563")
         }
     }
         
