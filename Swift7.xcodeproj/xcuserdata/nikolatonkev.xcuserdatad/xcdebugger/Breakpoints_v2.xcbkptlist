@@ -118,7 +118,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/MainViewController.swift"
@@ -150,7 +150,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
@@ -160,6 +160,114 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift7/Registration.swift"
+            timestampString = "429165324.260884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "sendRegistrationRequest(_:devuniqueid:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift7.Registration.sendRegistrationRequest (Swift7.Registration)(Swift.String, devuniqueid : Swift.String) -&gt; Swift.Bool"
+                  moduleName = "Swift7"
+                  urlString = "file:///Users/nikolatonkev/SwiftApps/Swift7/Swift7/Registration.swift"
+                  timestampString = "429161771.543109"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift7.Registration.sendRegistrationRequest (Swift7.Registration)(Swift.String, devuniqueid : Swift.String) -&gt; Swift.Bool"
+                  moduleName = "Swift7"
+                  urlString = "file:///Users/nikolatonkev/SwiftApps/Swift7/Swift7/Registration.swift"
+                  timestampString = "429161771.543268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "230">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift7/Registration.swift"
+            timestampString = "429165324.260884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "sendRegistrationRequest(_:devuniqueid:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift7.Registration.(sendRegistrationRequest (Swift7.Registration) -&gt; (Swift.String, devuniqueid : Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "Swift7"
+                  urlString = "file:///Users/nikolatonkev/SwiftApps/Swift7/Swift7/Registration.swift"
+                  timestampString = "429161923.888545"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "71">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift7.Registration.(sendRegistrationRequest (Swift7.Registration) -&gt; (Swift.String, devuniqueid : Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "Swift7"
+                  urlString = "file:///Users/nikolatonkev/SwiftApps/Swift7/Swift7/Registration.swift"
+                  timestampString = "429161923.889832"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1211">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift7/Registration.swift"
+            timestampString = "429165324.260884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "sendRegistrationRequest(_:devuniqueid:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

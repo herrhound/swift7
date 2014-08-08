@@ -77,7 +77,9 @@ class ViewController: UIViewController {
             
             self.lblErrorMsg.text = ""
             let reg = Registration()
-            return reg.register("sdfsdfsdf-646dstwer645-34tert63256-terwt342563")
+            reg.sendRegistrationRequest(self.texBoxExmail.text, devuniqueid: "sdfsdfsdf-646dstwer645-34tert63256-terwt342563")
+            return false
+            //return reg.register("sdfsdfsdf-646dstwer645-34tert63256-terwt342563")
         }
     }
         
