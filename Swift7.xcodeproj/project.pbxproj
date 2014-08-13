@@ -23,7 +23,12 @@
 		F16DD596194D3B6A00B41241 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16DD595194D3B6A00B41241 /* Settings.swift */; };
 		F16DD59C194E9AB800B41241 /* Swift7.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F16DD59A194E9AB800B41241 /* Swift7.xcdatamodeld */; };
 		F182F3B91994544C003FE3F6 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F3B81994544C003FE3F6 /* Serializable.swift */; };
+		F182F3BB1994907A003FE3F6 /* UserRegisterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */; };
 		F193153619943A4C008344B8 /* DeviceRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193153519943A4B008344B8 /* DeviceRegister.swift */; };
+		F1B24EB1199AE03200490DE6 /* NDApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */; };
+		F1B24EB3199AE04700490DE6 /* NDApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */; };
+		F1B24EB5199B00D600490DE6 /* NDApiRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */; };
+		F1BB8446199AC9EC00528DA1 /* Swift7.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F1BB8445199AC9EC00528DA1 /* Swift7.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +64,12 @@
 		F16DD595194D3B6A00B41241 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F16DD59B194E9AB800B41241 /* Swift7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift7.xcdatamodel; sourceTree = "<group>"; };
 		F182F3B81994544C003FE3F6 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterDTO.swift; sourceTree = "<group>"; };
 		F193153519943A4B008344B8 /* DeviceRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceRegister.swift; sourceTree = "<group>"; };
+		F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiRequest.swift; sourceTree = "<group>"; };
+		F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiResponse.swift; sourceTree = "<group>"; };
+		F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiRequestSender.swift; sourceTree = "<group>"; };
+		F1BB8445199AC9EC00528DA1 /* Swift7.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Swift7.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 		F15B2ADE19440395006DD4E0 = {
 			isa = PBXGroup;
 			children = (
+				F1BB8445199AC9EC00528DA1 /* Swift7.sqlite */,
 				F15455901954680200775D0B /* libsqlite3.dylib */,
 				F15B2AE919440395006DD4E0 /* Swift7 */,
 				F15B2AFF19440395006DD4E0 /* Swift7Tests */,
@@ -162,6 +173,9 @@
 				F154559519546E1F00775D0B /* Swift7-Bridging-Header.h */,
 				F16DD595194D3B6A00B41241 /* Settings.swift */,
 				F193153519943A4B008344B8 /* DeviceRegister.swift */,
+				F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */,
+				F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */,
+				F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -194,6 +208,7 @@
 				F116736619455B2F0087A152 /* BaseDAL.swift */,
 				F1545596195550A500775D0B /* PBaseDAL.swift */,
 				F182F3B81994544C003FE3F6 /* Serializable.swift */,
+				F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -278,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1BB8446199AC9EC00528DA1 /* Swift7.sqlite in Resources */,
 				F15B2AF519440395006DD4E0 /* Main.storyboard in Resources */,
 				F15B2AF719440395006DD4E0 /* Images.xcassets in Resources */,
 			);
@@ -306,9 +322,13 @@
 				F15B2B151944EE4B006DD4E0 /* Registration.swift in Sources */,
 				F182F3B91994544C003FE3F6 /* Serializable.swift in Sources */,
 				F15B2B121944DF73006DD4E0 /* MainViewController.swift in Sources */,
+				F1B24EB3199AE04700490DE6 /* NDApiResponse.swift in Sources */,
+				F182F3BB1994907A003FE3F6 /* UserRegisterDTO.swift in Sources */,
 				F193153619943A4C008344B8 /* DeviceRegister.swift in Sources */,
+				F1B24EB1199AE03200490DE6 /* NDApiRequest.swift in Sources */,
 				F1545597195550A500775D0B /* PBaseDAL.swift in Sources */,
 				F154559419546DEF00775D0B /* SqliteDatabase.m in Sources */,
+				F1B24EB5199B00D600490DE6 /* NDApiRequestSender.swift in Sources */,
 				F116736719455B2F0087A152 /* BaseDAL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

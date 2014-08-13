@@ -88,6 +88,11 @@ class ViewController: UIViewController {
             let mvc: MainViewController = segue.destinationViewController as MainViewController
         }
     }
+    
+    //helpers
+    func regUsrCallback(let requestData: NSData){
+        println("Hello")
+    }
 
 }
 

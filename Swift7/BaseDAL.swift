@@ -10,12 +10,8 @@ import Foundation
 
 class BaseDAL {
     var sqliteDatabase: SqliteDatabase
-/*
-    var applicationDocumentsDirectory: NSURL {
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        return urls[urls.endIndex-1] as NSURL
-    }
-*/
+    
+    
     init(){
         var applicationDocumentsDirectory: NSURL {
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -23,9 +19,10 @@ class BaseDAL {
         }
 
         let dbFileName: String = "Swift7.sqlite"
-        var dbPath = applicationDocumentsDirectory.URLByAppendingPathComponent(dbFileName).path
+        //var dbPath = applicationDocumentsDirectory.URLByAppendingPathComponent(dbFileName).path
         var bundle: NSBundle = NSBundle.mainBundle()
-        //var dbPath: NSString = bundle.resourcePath + "/" + dbFileName
+        var dbPath: NSString = bundle.resourcePath + "/" + dbFileName
+        //println(dbPath)
         self.sqliteDatabase = SqliteDatabase(path: dbPath)
     }
 

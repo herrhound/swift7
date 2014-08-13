@@ -36,6 +36,8 @@ class Serializable : NSObject{
                 propertiesDictionary.setValue(subArray, forKey: propName)
             } else if propValue is NSData {
                 propertiesDictionary.setValue(propValue, forKey: propName)
+            } else if propValue is NSUUID {
+                propertiesDictionary.setValue(propValue, forKey: propName)
             } else {
                 propertiesDictionary.setValue(propValue, forKey: propName)
             }
