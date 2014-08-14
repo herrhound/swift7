@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GPPSignInDelegate {
     
+    let kClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
+    //"692836200741-641qul89di077cprdafcb5qs5caq6fsg.apps.googleusercontent.com"
     var authenticated = false
 
     @IBOutlet var lblErrorMsg : UILabel! = nil
@@ -17,8 +19,27 @@ class ViewController: UIViewController {
     @IBOutlet var btnRegisterDevice : UIButton! = nil
     @IBOutlet var btnCancelRegisterDevice : UIButton! = nil
     @IBOutlet var devRegisterView : UIView! = nil
+    @IBOutlet  var btnGoogleAuth: UIButton!
     
+    @IBAction func btnGoogleAuth_TouchUpInside(sender: AnyObject) {
+        println("Google")
+    }
     
+    func finishedWithAuth(let auth: GTMOAuth2Authentication, let error: NSError) {
+        if(error != nil)
+        {
+            println("Received error %@ and auth object %@",error, auth)
+        }
+        else
+        {
+            let serverCode: NSString = GPPSignIn.sharedInstance().homeServerAuthorizationCode
+        }
+    }
+    /*
+    func presentSignInViewController(let viewController: UIViewController){
+        
+    }
+    */
     
     @IBAction func EditingEmailDidEnd(sender : AnyObject) {
         texBoxExmail.resignFirstResponder()
@@ -39,6 +60,38 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblErrorMsg.text = ""
+        
+        let signIn = GPPSignIn.sharedInstance()
+        signIn.shouldFetchGooglePlusUser = true
+        
+        // You previously set kClientId in the "Initialize the Google+ client" step
+        signIn.clientID = kClientId;
+
+        signIn.homeServerClientID = "783241267105-m2ufvgncm0n70nfc2upc2mv87ogjsn6b.apps.googleusercontent.com";
+
+        // Uncomment one of these two statements for the scope you chose in the previous step
+        signIn.scopes = [kGTLAuthScopePlusLogin] //"https://www.googleapis.com/auth/plus.login"
+        //signIn.scopes = @[ @"profile" ];            // "profile" scope
+        
+        // Optional: declare signIn.actions, see "app activities"
+        signIn.delegate = self;
+        
+        /*
+        let signIn = GPPSignIn.sharedInstance()
+        signIn.shouldFetchGooglePlusUser = true
+        //signIn.shouldFetchGoogleUserEmail = true  // Uncomment to get the user's email
+        
+        // You previously set kClientId in the "Initialize the Google+ client" step
+        signIn.clientID = kClientId;
+        
+        // Uncomment one of these two statements for the scope you chose in the previous step
+        signIn.scopes = [kGTLAuthScopePlusLogin] //"https://www.googleapis.com/auth/plus.login"
+        //signIn.scopes = @[ @"profile" ];            // "profile" scope
+        
+        // Optional: declare signIn.actions, see "app activities"
+        signIn.delegate = self;
+        */
+
     }
     
     override func viewDidAppear(animated: Bool) {

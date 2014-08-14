@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "429108874.528599"
+            timestampString = "429679112.5875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "shouldPerformSegueWithIdentifier(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "429109110.03116"
+            timestampString = "429679112.5875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "429569368.535273"
+            timestampString = "429679112.5875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
             <Locations>
@@ -342,11 +342,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "429569383.160984"
+            timestampString = "429679112.5875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -358,11 +358,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "429569457.187653"
+            timestampString = "429679112.5875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
             <Locations>
@@ -404,11 +404,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "429569481.153199"
+            timestampString = "429679112.5875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -459,6 +459,100 @@
             endingLineNumber = "29"
             landmarkName = "sendAsyncRequest(_:httpMethod:requestData:callback:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift7/ViewController.swift"
+            timestampString = "429679112.5875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift7/ViewController.swift"
+            timestampString = "429677508.660969"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "finishedWithAuth(_:error:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift7/ViewController.swift"
+            timestampString = "429678376.318975"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "finishedWithAuth(_:error:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift7/ViewController.swift"
+            timestampString = "429678378.198248"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "finishedWithAuth(_:error:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift7.ViewController.finishedWithAuth (Swift7.ViewController)(ObjectiveC.GTMOAuth2Authentication, error : ObjectiveC.NSError) -&gt; ()"
+                  moduleName = "Swift7"
+                  urlString = "file:///Users/nikolatonkev/SwiftApps/Swift7/Swift7/ViewController.swift"
+                  timestampString = "429679112.932748"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift7.ViewController.finishedWithAuth (Swift7.ViewController)(ObjectiveC.GTMOAuth2Authentication, error : ObjectiveC.NSError) -&gt; ()"
+                  moduleName = "Swift7"
+                  urlString = "file:///Users/nikolatonkev/SwiftApps/Swift7/Swift7/ViewController.swift"
+                  timestampString = "429679112.933309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1350">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

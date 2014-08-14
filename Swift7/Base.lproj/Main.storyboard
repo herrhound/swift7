@@ -70,6 +70,15 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-hC-TlK" customClass="GPPSignInButton">
+                                <rect key="frame" x="40" y="293" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGoogleAuth_TouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t81-Tn-bai"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -80,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="btnCancelRegisterDevice" destination="zur-Ft-OaC" id="91t-0G-Oz4"/>
+                        <outlet property="btnGoogleAuth" destination="nY7-hC-TlK" id="d3g-CT-7bl"/>
                         <outlet property="devRegisterView" destination="kh9-bI-dsS" id="iw8-cp-LeX"/>
                         <outlet property="lblErrorMsg" destination="2ih-Rp-MdI" id="gAK-D3-s01"/>
                         <outlet property="texBoxExmail" destination="Amz-WO-XiA" id="UPo-KG-MBZ"/>
