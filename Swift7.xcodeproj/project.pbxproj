@@ -25,9 +25,9 @@
 		F182F3B91994544C003FE3F6 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F3B81994544C003FE3F6 /* Serializable.swift */; };
 		F182F3BB1994907A003FE3F6 /* UserRegisterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */; };
 		F193153619943A4C008344B8 /* DeviceRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193153519943A4B008344B8 /* DeviceRegister.swift */; };
-		F1960A8119A1AD4D00DEA9A4 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A7E19A1AD4D00DEA9A4 /* GoogleOpenSource.framework */; };
-		F1960A8219A1AD4D00DEA9A4 /* GooglePlus.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A7F19A1AD4D00DEA9A4 /* GooglePlus.bundle */; };
-		F1960A8319A1AD4D00DEA9A4 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A8019A1AD4D00DEA9A4 /* GooglePlus.framework */; };
+		F1960A8719A1B08400DEA9A4 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A8419A1B08400DEA9A4 /* GoogleOpenSource.framework */; };
+		F1960A8819A1B08400DEA9A4 /* GooglePlus.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A8519A1B08400DEA9A4 /* GooglePlus.bundle */; };
+		F1960A8919A1B08400DEA9A4 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A8619A1B08400DEA9A4 /* GooglePlus.framework */; };
 		F1B24EB1199AE03200490DE6 /* NDApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */; };
 		F1B24EB3199AE04700490DE6 /* NDApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */; };
 		F1B24EB5199B00D600490DE6 /* NDApiRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */; };
@@ -80,9 +80,9 @@
 		F182F3B81994544C003FE3F6 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterDTO.swift; sourceTree = "<group>"; };
 		F193153519943A4B008344B8 /* DeviceRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceRegister.swift; sourceTree = "<group>"; };
-		F1960A7E19A1AD4D00DEA9A4 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = "../../Desktop/iOS projects/google-plus-ios-sdk-1.7.0/GoogleOpenSource.framework"; sourceTree = "<group>"; };
-		F1960A7F19A1AD4D00DEA9A4 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = "../../Desktop/iOS projects/google-plus-ios-sdk-1.7.0/GooglePlus.bundle"; sourceTree = "<group>"; };
-		F1960A8019A1AD4D00DEA9A4 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = "../../Desktop/iOS projects/google-plus-ios-sdk-1.7.0/GooglePlus.framework"; sourceTree = "<group>"; };
+		F1960A8419A1B08400DEA9A4 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleOpenSource.framework; path = Swift7/GoogleOpenSource.framework; sourceTree = "<group>"; };
+		F1960A8519A1B08400DEA9A4 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlus.bundle; path = Swift7/GooglePlus.bundle; sourceTree = "<group>"; };
+		F1960A8619A1B08400DEA9A4 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlus.framework; path = Swift7/GooglePlus.framework; sourceTree = "<group>"; };
 		F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiRequest.swift; sourceTree = "<group>"; };
 		F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiResponse.swift; sourceTree = "<group>"; };
 		F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiRequestSender.swift; sourceTree = "<group>"; };
@@ -105,9 +105,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1960A8119A1AD4D00DEA9A4 /* GoogleOpenSource.framework in Frameworks */,
-				F1960A8219A1AD4D00DEA9A4 /* GooglePlus.bundle in Frameworks */,
-				F1960A8319A1AD4D00DEA9A4 /* GooglePlus.framework in Frameworks */,
+				F1960A8719A1B08400DEA9A4 /* GoogleOpenSource.framework in Frameworks */,
+				F1960A8819A1B08400DEA9A4 /* GooglePlus.bundle in Frameworks */,
+				F1960A8919A1B08400DEA9A4 /* GooglePlus.framework in Frameworks */,
 				F1FA2076199BCAC7004DBBDC /* AddressBook.framework in Frameworks */,
 				F1FA2077199BCAC7004DBBDC /* AssetsLibrary.framework in Frameworks */,
 				F1FA2078199BCAC7004DBBDC /* CoreGraphics.framework in Frameworks */,
@@ -136,9 +136,9 @@
 		F15B2ADE19440395006DD4E0 = {
 			isa = PBXGroup;
 			children = (
-				F1960A7E19A1AD4D00DEA9A4 /* GoogleOpenSource.framework */,
-				F1960A7F19A1AD4D00DEA9A4 /* GooglePlus.bundle */,
-				F1960A8019A1AD4D00DEA9A4 /* GooglePlus.framework */,
+				F1960A8419A1B08400DEA9A4 /* GoogleOpenSource.framework */,
+				F1960A8519A1B08400DEA9A4 /* GooglePlus.bundle */,
+				F1960A8619A1B08400DEA9A4 /* GooglePlus.framework */,
 				F1FA206B199BCAC6004DBBDC /* AddressBook.framework */,
 				F1FA206C199BCAC6004DBBDC /* AssetsLibrary.framework */,
 				F1FA206D199BCAC6004DBBDC /* CoreGraphics.framework */,
@@ -511,6 +511,7 @@
 					"/Users/nikolatonkev/Downloads/google-plus-ios-sdk-1.7-2.0",
 					/Users/nikolatonkev/Desktop/iOS,
 					"projects/google-plus-ios-sdk-1.7.0",
+					"$(PROJECT_DIR)/Swift7",
 				);
 				INFOPLIST_FILE = Swift7/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -536,6 +537,7 @@
 					"/Users/nikolatonkev/Downloads/google-plus-ios-sdk-1.7-2.0",
 					/Users/nikolatonkev/Desktop/iOS,
 					"projects/google-plus-ios-sdk-1.7.0",
+					"$(PROJECT_DIR)/Swift7",
 				);
 				INFOPLIST_FILE = Swift7/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
