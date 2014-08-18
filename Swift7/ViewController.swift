@@ -67,7 +67,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         // You previously set kClientId in the "Initialize the Google+ client" step
         signIn.clientID = kClientId;
 
-        signIn.homeServerClientID = "783241267105-m2ufvgncm0n70nfc2upc2mv87ogjsn6b.apps.googleusercontent.com";
+        //signIn.homeServerClientID = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com";
 
         // Uncomment one of these two statements for the scope you chose in the previous step
         signIn.scopes = [kGTLAuthScopePlusLogin] //"https://www.googleapis.com/auth/plus.login"
