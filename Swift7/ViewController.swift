@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController, GPPSignInDelegate {
     
-    let kClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
+    
+    //var signIn: GPPSignIn
+    var kClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
+    var kServerClientId: NSString = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"
+    var kSecret: NSString = "MbSGiXXwLPaanFbJSVseW9qs"
+    
     //"692836200741-641qul89di077cprdafcb5qs5caq6fsg.apps.googleusercontent.com"
-    var authenticated = false
+    //var authenticated = false
 
     @IBOutlet var lblErrorMsg : UILabel! = nil
     @IBOutlet var texBoxExmail : UITextField! = nil
@@ -21,25 +26,23 @@ class ViewController: UIViewController, GPPSignInDelegate {
     @IBOutlet var devRegisterView : UIView! = nil
     @IBOutlet  var btnGoogleAuth: UIButton!
     
+    /*
+    override init(){
+        super.init()
+        signIn = GPPSignIn.sharedInstance()
+        kClientId = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
+        kServerClientId = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"
+        kSecret = "MbSGiXXwLPaanFbJSVseW9qs"
+   }
+   */
     @IBAction func btnGoogleAuth_TouchUpInside(sender: AnyObject) {
         println("Google")
     }
     
-    func finishedWithAuth(let auth: GTMOAuth2Authentication, let error: NSError) {
-        if(error != nil)
-        {
-            println("Received error %@ and auth object %@",error, auth)
-        }
-        else
-        {
-            let serverCode: NSString = GPPSignIn.sharedInstance().homeServerAuthorizationCode
-        }
-    }
-    /*
     func presentSignInViewController(let viewController: UIViewController){
         
     }
-    */
+    
     
     @IBAction func EditingEmailDidEnd(sender : AnyObject) {
         texBoxExmail.resignFirstResponder()
@@ -56,6 +59,17 @@ class ViewController: UIViewController, GPPSignInDelegate {
         texBoxExmail.text = ""
     }
     
+    func finishedWithAuth(auth: GTMOAuth2Authentication, error: NSError?) {
+        //if(error.)
+        //{
+        println("Hello!")
+        //println("Received error %@ and auth object %@",error, auth)
+        //}
+        //else
+        //{
+        //    let serverCode: NSString = GPPSignIn.sharedInstance().homeServerAuthorizationCode
+        //}
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,35 +77,15 @@ class ViewController: UIViewController, GPPSignInDelegate {
         
         let signIn = GPPSignIn.sharedInstance()
         signIn.shouldFetchGooglePlusUser = true
+        //signIn.trySilentAuthentication = true
         
-        // You previously set kClientId in the "Initialize the Google+ client" step
-        signIn.clientID = kClientId;
+        signIn.clientID = kClientId
+        signIn.homeServerClientID = kServerClientId
 
-        //signIn.homeServerClientID = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com";
-
-        // Uncomment one of these two statements for the scope you chose in the previous step
         signIn.scopes = [kGTLAuthScopePlusLogin] //"https://www.googleapis.com/auth/plus.login"
-        //signIn.scopes = @[ @"profile" ];            // "profile" scope
         
         // Optional: declare signIn.actions, see "app activities"
         signIn.delegate = self;
-        
-        /*
-        let signIn = GPPSignIn.sharedInstance()
-        signIn.shouldFetchGooglePlusUser = true
-        //signIn.shouldFetchGoogleUserEmail = true  // Uncomment to get the user's email
-        
-        // You previously set kClientId in the "Initialize the Google+ client" step
-        signIn.clientID = kClientId;
-        
-        // Uncomment one of these two statements for the scope you chose in the previous step
-        signIn.scopes = [kGTLAuthScopePlusLogin] //"https://www.googleapis.com/auth/plus.login"
-        //signIn.scopes = @[ @"profile" ];            // "profile" scope
-        
-        // Optional: declare signIn.actions, see "app activities"
-        signIn.delegate = self;
-        */
-
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -115,7 +109,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
-        if(authenticated) {
+        if(true) {
             return true
         }
         else {
