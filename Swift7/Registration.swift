@@ -21,6 +21,8 @@ class Registration {
     }
     
     func sendRegistrationRequest(let email: String, let devuniqueid: String) {
+        /*
+        
         var success: Bool = false;
         var url = NSURL(string: "http://dry-atoll-6423.herokuapp.com/registeruser")
         var request = NSMutableURLRequest(URL: url)
@@ -40,7 +42,7 @@ class Registration {
         let jsonString = model.toJsonString()
         //println(jsonString)
         
-        var requestBodyData: NSData = (jsonString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        var requestBodyData: NSData = (jsonString as NSString).dataUsingEncoding(NSUTF8StringEncoding)!
         request.HTTPBody = requestBodyData
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, responseData, error) in
@@ -68,6 +70,7 @@ class Registration {
         }
         
         //return success;
+*/
     }
     
     func register(let token:String) -> Bool {

@@ -25,24 +25,10 @@
 		F182F3B91994544C003FE3F6 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F3B81994544C003FE3F6 /* Serializable.swift */; };
 		F182F3BB1994907A003FE3F6 /* UserRegisterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */; };
 		F193153619943A4C008344B8 /* DeviceRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193153519943A4B008344B8 /* DeviceRegister.swift */; };
-		F1960A8719A1B08400DEA9A4 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A8419A1B08400DEA9A4 /* GoogleOpenSource.framework */; };
-		F1960A8819A1B08400DEA9A4 /* GooglePlus.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A8519A1B08400DEA9A4 /* GooglePlus.bundle */; };
-		F1960A8919A1B08400DEA9A4 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1960A8619A1B08400DEA9A4 /* GooglePlus.framework */; };
 		F1B24EB1199AE03200490DE6 /* NDApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */; };
 		F1B24EB3199AE04700490DE6 /* NDApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */; };
 		F1B24EB5199B00D600490DE6 /* NDApiRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */; };
 		F1BB8446199AC9EC00528DA1 /* Swift7.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F1BB8445199AC9EC00528DA1 /* Swift7.sqlite */; };
-		F1FA2076199BCAC7004DBBDC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA206B199BCAC6004DBBDC /* AddressBook.framework */; };
-		F1FA2077199BCAC7004DBBDC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA206C199BCAC6004DBBDC /* AssetsLibrary.framework */; };
-		F1FA2078199BCAC7004DBBDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA206D199BCAC6004DBBDC /* CoreGraphics.framework */; };
-		F1FA2079199BCAC7004DBBDC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA206E199BCAC6004DBBDC /* CoreLocation.framework */; };
-		F1FA207A199BCAC7004DBBDC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA206F199BCAC7004DBBDC /* CoreMotion.framework */; };
-		F1FA207B199BCAC7004DBBDC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA2070199BCAC7004DBBDC /* CoreText.framework */; };
-		F1FA207C199BCAC7004DBBDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA2071199BCAC7004DBBDC /* Foundation.framework */; };
-		F1FA207D199BCAC7004DBBDC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA2072199BCAC7004DBBDC /* MediaPlayer.framework */; };
-		F1FA207E199BCAC7004DBBDC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA2073199BCAC7004DBBDC /* Security.framework */; };
-		F1FA207F199BCAC7004DBBDC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA2074199BCAC7004DBBDC /* SystemConfiguration.framework */; };
-		F1FA2080199BCAC7004DBBDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1FA2075199BCAC7004DBBDC /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,20 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1960A8719A1B08400DEA9A4 /* GoogleOpenSource.framework in Frameworks */,
-				F1960A8819A1B08400DEA9A4 /* GooglePlus.bundle in Frameworks */,
-				F1960A8919A1B08400DEA9A4 /* GooglePlus.framework in Frameworks */,
-				F1FA2076199BCAC7004DBBDC /* AddressBook.framework in Frameworks */,
-				F1FA2077199BCAC7004DBBDC /* AssetsLibrary.framework in Frameworks */,
-				F1FA2078199BCAC7004DBBDC /* CoreGraphics.framework in Frameworks */,
-				F1FA2079199BCAC7004DBBDC /* CoreLocation.framework in Frameworks */,
-				F1FA207A199BCAC7004DBBDC /* CoreMotion.framework in Frameworks */,
-				F1FA207B199BCAC7004DBBDC /* CoreText.framework in Frameworks */,
-				F1FA207C199BCAC7004DBBDC /* Foundation.framework in Frameworks */,
-				F1FA207D199BCAC7004DBBDC /* MediaPlayer.framework in Frameworks */,
-				F1FA207E199BCAC7004DBBDC /* Security.framework in Frameworks */,
-				F1FA207F199BCAC7004DBBDC /* SystemConfiguration.framework in Frameworks */,
-				F1FA2080199BCAC7004DBBDC /* UIKit.framework in Frameworks */,
 				F15455911954680200775D0B /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

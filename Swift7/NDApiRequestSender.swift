@@ -22,7 +22,7 @@ class NDApiRequestSender {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         let jsonString = (requestData as Serializable).toJsonString()
-        var requestBodyData: NSData = (jsonString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        var requestBodyData: NSData! = (jsonString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = requestBodyData
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, responseData, error) in

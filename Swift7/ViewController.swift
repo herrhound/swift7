@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, GPPSignInDelegate {
+class ViewController: UIViewController /*, GPPSignInDelegate */{
     
     
     //var signIn: GPPSignIn
@@ -59,22 +59,22 @@ class ViewController: UIViewController, GPPSignInDelegate {
         texBoxExmail.text = ""
     }
     
-    func finishedWithAuth(auth: GTMOAuth2Authentication, error: NSError?) {
+    //func finishedWithAuth(auth: GTMOAuth2Authentication, error: NSError?) {
         //if(error.)
         //{
-        println("Hello!")
+        //println("Hello!")
         //println("Received error %@ and auth object %@",error, auth)
         //}
         //else
         //{
         //    let serverCode: NSString = GPPSignIn.sharedInstance().homeServerAuthorizationCode
         //}
-    }
+    //}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lblErrorMsg.text = ""
-        
+        /*
         let signIn = GPPSignIn.sharedInstance()
         signIn.shouldFetchGooglePlusUser = true
         //signIn.trySilentAuthentication = true
@@ -86,6 +86,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         
         // Optional: declare signIn.actions, see "app activities"
         signIn.delegate = self;
+        */
     }
     
     override func viewDidAppear(animated: Bool) {

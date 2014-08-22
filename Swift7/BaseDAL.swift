@@ -21,7 +21,7 @@ class BaseDAL {
         let dbFileName: String = "Swift7.sqlite"
         //var dbPath = applicationDocumentsDirectory.URLByAppendingPathComponent(dbFileName).path
         var bundle: NSBundle = NSBundle.mainBundle()
-        var dbPath: NSString = bundle.resourcePath + "/" + dbFileName
+        var dbPath: NSString = bundle.resourcePath! + "/" + dbFileName
         //println(dbPath)
         self.sqliteDatabase = SqliteDatabase(path: dbPath)
     }
