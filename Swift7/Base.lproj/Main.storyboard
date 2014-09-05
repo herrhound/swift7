@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -71,12 +70,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-hC-TlK" customClass="GPPSignInButton">
-                                <rect key="frame" x="40" y="293" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="40" y="293" width="101" height="30"/>
+                                <state key="normal" title="Google+ log in">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CG-op-sUR">
+                                <rect key="frame" x="40" y="331" width="111" height="30"/>
+                                <state key="normal" title="Google+ log out">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnGoogleAuth_TouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t81-Tn-bai"/>
+                                    <action selector="btnGoogleAuthDisconect_TouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ELN-0D-pvz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +95,7 @@
                     <connections>
                         <outlet property="btnCancelRegisterDevice" destination="zur-Ft-OaC" id="91t-0G-Oz4"/>
                         <outlet property="btnGoogleAuth" destination="nY7-hC-TlK" id="d3g-CT-7bl"/>
+                        <outlet property="btnGoogleAuthDisconect" destination="8CG-op-sUR" id="tvS-rC-Wtf"/>
                         <outlet property="devRegisterView" destination="kh9-bI-dsS" id="iw8-cp-LeX"/>
                         <outlet property="lblErrorMsg" destination="2ih-Rp-MdI" id="gAK-D3-s01"/>
                         <outlet property="texBoxExmail" destination="Amz-WO-XiA" id="UPo-KG-MBZ"/>

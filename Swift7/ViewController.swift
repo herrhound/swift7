@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController /*, GPPSignInDelegate */{
+class ViewController: UIViewController, GPPSignInDelegate {
     
     
     //var signIn: GPPSignIn
     var kClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
-    var kServerClientId: NSString = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"
+    var kServerClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
     var kSecret: NSString = "MbSGiXXwLPaanFbJSVseW9qs"
+    var responsData: NSMutableData = NSMutableData()
+
+//    static NSString * const kClientId = @"783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com";
+//    static NSString * const kServerClientId = @"783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com";
+//    static NSString * const kSecret = @"MbSGiXXwLPaanFbJSVseW9qs";
     
     //"692836200741-641qul89di077cprdafcb5qs5caq6fsg.apps.googleusercontent.com"
     //var authenticated = false
@@ -24,23 +29,36 @@ class ViewController: UIViewController /*, GPPSignInDelegate */{
     @IBOutlet var btnRegisterDevice : UIButton! = nil
     @IBOutlet var btnCancelRegisterDevice : UIButton! = nil
     @IBOutlet var devRegisterView : UIView! = nil
-    @IBOutlet  var btnGoogleAuth: UIButton!
+    @IBOutlet var btnGoogleAuth: GPPSignInButton!
+    @IBOutlet var btnGoogleAuthDisconect: UIButton!
     
-    /*
-    override init(){
-        super.init()
-        signIn = GPPSignIn.sharedInstance()
-        kClientId = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
-        kServerClientId = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"
-        kSecret = "MbSGiXXwLPaanFbJSVseW9qs"
-   }
-   */
-    @IBAction func btnGoogleAuth_TouchUpInside(sender: AnyObject) {
-        println("Google")
+    
+//    override init(){
+//        super.init()
+//        responsData = null
+//   }
+    
+    func disconect() -> Void {
+        GPPSignIn.sharedInstance().disconnect()
     }
     
-    func presentSignInViewController(let viewController: UIViewController){
-        
+    func didDisconnectWithError(error: NSError!) -> Void{
+        if (error != nil) {
+            println("Received error %@", error);
+        } else {
+            // The user is signed out and disconnected.
+            // Clean up user data as specified by the Google+ terms.
+        }
+    }
+   
+    
+    @IBAction func btnGoogleAuthDisconect_TouchUpInside(sender: AnyObject) {
+        self.disconect()
+    }
+    
+    
+    func presentSignInViewController(viewController: UIViewController){
+        self.navigationController.pushViewController(viewController, animated:true)
     }
     
     
@@ -59,48 +77,92 @@ class ViewController: UIViewController /*, GPPSignInDelegate */{
         texBoxExmail.text = ""
     }
     
-    //func finishedWithAuth(auth: GTMOAuth2Authentication, error: NSError?) {
-        //if(error.)
-        //{
-        //println("Hello!")
-        //println("Received error %@ and auth object %@",error, auth)
-        //}
-        //else
-        //{
-        //    let serverCode: NSString = GPPSignIn.sharedInstance().homeServerAuthorizationCode
-        //}
-    //}
+    
+    func connectionDidFinishLoading(connection: NSURLConnection!) -> Void {
+        //println("Succeeded! Received %n bytes of data", responsData?.length)
+        //println("Succeeded!")
+        let str: NSString = NSString(data:responsData, encoding: NSUTF8StringEncoding)
+        println("%@", str);
+    }
+    
+    func connection(connection: NSURLConnection, error: NSError!) -> Void {
+        println("%@\n", error.description)
+    }
+    
+    func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) -> Void {
+        self.responsData = NSMutableData()
+    }
+    
+    func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) -> Void {
+        responsData.appendData(conData)
+    }
+    
+    func doRequestCallback(let code: NSString) {
+        let URLWithString = NSString(format:"https://dry-atoll-6423.herokuapp.com/oauth2callback?code=%@", code)
+        let url: NSURL = NSURL(string: URLWithString)
+        var request: NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        request.HTTPMethod = "POST"
+
+        request.addValue("text/html", forHTTPHeaderField: "Content-Type")
+        
+        var connection: NSURLConnection = NSURLConnection(request:request, delegate:self)
+        connection.start()
+//        if (connection.) {
+//            responsData = NSMutableData(data)
+//        }
+        
+        
+        
+//        let connection: NSURLConnection = NSURLConnection(request:request, delegate:self)
+//        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, responseData, error) in
+//            if(error != nil) {
+//                self.responsData = NSMutableData.data()
+//            }
+//        }
+    }
+    
+    func finishedWithAuth(auth: GTMOAuth2Authentication, error: NSError!) ->Void{
+        if(error != nil)
+        {
+            println("Hello!")
+            println("Received error %@ and auth object %@",error, auth)
+        }
+        else
+        {
+            var code = auth.valueForKey("code")
+            self.doRequestCallback(code as NSString)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lblErrorMsg.text = ""
-        /*
+        
         let signIn = GPPSignIn.sharedInstance()
-        signIn.shouldFetchGooglePlusUser = true
-        //signIn.trySilentAuthentication = true
+        signIn.shouldFetchGooglePlusUser = false
         
         signIn.clientID = kClientId
         signIn.homeServerClientID = kServerClientId
-
-        signIn.scopes = [kGTLAuthScopePlusLogin] //"https://www.googleapis.com/auth/plus.login"
         
-        // Optional: declare signIn.actions, see "app activities"
+        signIn.scopes = [kGTLAuthScopePlusLogin]
+        
         signIn.delegate = self;
-        */
+        //signIn.authenticate()
     }
     
     override func viewDidAppear(animated: Bool) {
+        /*
         super.viewDidAppear(animated)
         let reg = Registration()
         let success = reg.checkIfRegistered()
         if(success){
             self.performSegueWithIdentifier("MainViewSegue", sender: self)
         }
+        */
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func validateEmail(let email: String) -> Bool {
@@ -110,6 +172,7 @@ class ViewController: UIViewController /*, GPPSignInDelegate */{
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        /*
         if(true) {
             return true
         }
@@ -129,12 +192,16 @@ class ViewController: UIViewController /*, GPPSignInDelegate */{
             return false
             //return reg.register("sdfsdfsdf-646dstwer645-34tert63256-terwt342563")
         }
+        */
+        return true
     }
         
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        /*
         if (segue.identifier == "MainViewSegue") {
             let mvc: MainViewController = segue.destinationViewController as MainViewController
         }
+        */
     }
     
     //helpers

@@ -17,7 +17,7 @@
 - (id)initWithPath:(NSString*)databasePath;
 - (NSArray*) processSelectStatement:(NSString *)sql;
 - (BOOL) processExecuteStatement:(NSString *)sql;
-- (int) lastInsertedRowID;
+//- (int) lastInsertedRowID;
 - (BOOL) openDatabase;
 - (void) closeDatabase;
 - (BOOL) beginTransaction;
