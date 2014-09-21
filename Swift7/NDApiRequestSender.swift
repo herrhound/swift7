@@ -25,11 +25,11 @@ class NDApiRequestSender {
         var requestBodyData: NSData! = (jsonString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = requestBodyData
         
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, responseData, error) in
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, data, error) -> Void in
             success = (error != nil)
             if(success) {
                 //success =
-                callback(responseData)
+                //callback(responseData)
             }
         }
         

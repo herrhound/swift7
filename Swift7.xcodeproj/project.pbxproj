@@ -38,6 +38,9 @@
 		F1B24EB3199AE04700490DE6 /* NDApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */; };
 		F1B24EB5199B00D600490DE6 /* NDApiRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */; };
 		F1BB8446199AC9EC00528DA1 /* Swift7.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F1BB8445199AC9EC00528DA1 /* Swift7.sqlite */; };
+		F1E1A66119CE54AE0040F74B /* GoogleToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E1A66019CE54AE0040F74B /* GoogleToken.swift */; };
+		F1E1A66319CE56E20040F74B /* Deserializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E1A66219CE56E20040F74B /* Deserializable.swift */; };
+		F1E1A66519CE7E130040F74B /* GoogleUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E1A66419CE7E130040F74B /* GoogleUserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiResponse.swift; sourceTree = "<group>"; };
 		F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiRequestSender.swift; sourceTree = "<group>"; };
 		F1BB8445199AC9EC00528DA1 /* Swift7.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Swift7.sqlite; sourceTree = "<group>"; };
+		F1E1A66019CE54AE0040F74B /* GoogleToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleToken.swift; sourceTree = "<group>"; };
+		F1E1A66219CE56E20040F74B /* Deserializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserializable.swift; sourceTree = "<group>"; };
+		F1E1A66419CE7E130040F74B /* GoogleUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleUserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,12 +203,14 @@
 		F15B2B0E1944046A006DD4E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F1E1A66019CE54AE0040F74B /* GoogleToken.swift */,
 				F154559519546E1F00775D0B /* Swift7-Bridging-Header.h */,
 				F16DD595194D3B6A00B41241 /* Settings.swift */,
 				F193153519943A4B008344B8 /* DeviceRegister.swift */,
 				F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */,
 				F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */,
 				F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */,
+				F1E1A66419CE7E130040F74B /* GoogleUserInfo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 				F1545596195550A500775D0B /* PBaseDAL.swift */,
 				F182F3B81994544C003FE3F6 /* Serializable.swift */,
 				F1B24EB4199B00D600490DE6 /* NDApiRequestSender.swift */,
+				F1E1A66219CE56E20040F74B /* Deserializable.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -357,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E1A66119CE54AE0040F74B /* GoogleToken.swift in Sources */,
 				F15B2AF219440395006DD4E0 /* ViewController.swift in Sources */,
 				F15B2AED19440395006DD4E0 /* AppDelegate.swift in Sources */,
 				F16DD59C194E9AB800B41241 /* Swift7.xcdatamodeld in Sources */,
@@ -370,10 +380,12 @@
 				F182F3BB1994907A003FE3F6 /* UserRegisterDTO.swift in Sources */,
 				F193153619943A4C008344B8 /* DeviceRegister.swift in Sources */,
 				F1B24EB1199AE03200490DE6 /* NDApiRequest.swift in Sources */,
+				F1E1A66319CE56E20040F74B /* Deserializable.swift in Sources */,
 				F1545597195550A500775D0B /* PBaseDAL.swift in Sources */,
 				F154559419546DEF00775D0B /* SqliteDatabase.m in Sources */,
 				F1B24EB5199B00D600490DE6 /* NDApiRequestSender.swift in Sources */,
 				F116736719455B2F0087A152 /* BaseDAL.swift in Sources */,
+				F1E1A66519CE7E130040F74B /* GoogleUserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

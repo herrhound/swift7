@@ -79,10 +79,14 @@ class ViewController: UIViewController, GPPSignInDelegate {
     
     
     func connectionDidFinishLoading(connection: NSURLConnection!) -> Void {
-        //println("Succeeded! Received %n bytes of data", responsData?.length)
-        //println("Succeeded!")
-        let str: NSString = NSString(data:responsData, encoding: NSUTF8StringEncoding)
-        println("response -> %@", str);
+//        var googleToken : GoogleToken = GoogleToken(JSONString: jsonString)
+        //println("response -> %@", str);
+
+        var jsonResult = NSJSONSerialization.JSONObjectWithData(responsData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        
+        let googleToken = GoogleToken(access_token: jsonResult.valueForKey("access_token") as String, expires_in: jsonResult.valueForKey("expires_in") as Int, id_token: jsonResult.valueForKey("id_token") as String, refresh_token: jsonResult.valueForKey("refresh_token") as String, token_type: jsonResult.valueForKey("token_type")as String)
+        doRegisterUser(googleToken.access_token)
+        
     }
     
     func connection(connection: NSURLConnection, error: NSError!) -> Void {
@@ -107,19 +111,23 @@ class ViewController: UIViewController, GPPSignInDelegate {
         
         var connection: NSURLConnection = NSURLConnection(request:request, delegate:self)
         connection.start()
-//        if (connection.) {
-//            responsData = NSMutableData(data)
-//        }
-        
-        
-        
-//        let connection: NSURLConnection = NSURLConnection(request:request, delegate:self)
-//        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {(response, responseData, error) in
-//            if(error != nil) {
-//                self.responsData = NSMutableData.data()
-//            }
-//        }
     }
+    
+    func doRegisterUser(let access_token: NSString) {
+        
+        var err: NSError?
+        let URLWithString = NSString(format:"https://dry-atoll-6423.herokuapp.com/registeruser?access_token=%@", access_token)
+        let url: NSURL = NSURL(string: URLWithString)
+        var request = NSMutableURLRequest(URL: url)
+        
+        request.HTTPMethod = "POST"
+
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(),completionHandler: {(response, data, err) -> Void in
+                var result = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+            let googleUserInfo = GoogleUserInfo(data:result)
+        })
+    }
+
     
     func finishedWithAuth(auth: GTMOAuth2Authentication, error: NSError!) ->Void{
         if(error != nil)
