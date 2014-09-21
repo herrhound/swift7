@@ -13,7 +13,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
     
     //var signIn: GPPSignIn
     var kClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
-    var kServerClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
+    var kServerClientId: NSString = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"
     var kSecret: NSString = "MbSGiXXwLPaanFbJSVseW9qs"
     var responsData: NSMutableData = NSMutableData()
 
@@ -58,7 +58,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
     
     
     func presentSignInViewController(viewController: UIViewController){
-        self.navigationController.pushViewController(viewController, animated:true)
+        //self.navigationController.pushViewController(viewController, animated:true)
     }
     
     
@@ -82,7 +82,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         //println("Succeeded! Received %n bytes of data", responsData?.length)
         //println("Succeeded!")
         let str: NSString = NSString(data:responsData, encoding: NSUTF8StringEncoding)
-        println("%@", str);
+        println("response -> %@", str);
     }
     
     func connection(connection: NSURLConnection, error: NSError!) -> Void {
@@ -101,7 +101,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         let URLWithString = NSString(format:"https://dry-atoll-6423.herokuapp.com/oauth2callback?code=%@", code)
         let url: NSURL = NSURL(string: URLWithString)
         var request: NSMutableURLRequest = NSMutableURLRequest(URL:url)
-        request.HTTPMethod = "POST"
+        request.HTTPMethod = "GET"
 
         request.addValue("text/html", forHTTPHeaderField: "Content-Type")
         
@@ -129,8 +129,10 @@ class ViewController: UIViewController, GPPSignInDelegate {
         }
         else
         {
-            var code = auth.valueForKey("code")
-            self.doRequestCallback(code as NSString)
+            //var code = auth.valueForKey("server_code")
+            let signIn = GPPSignIn.sharedInstance()
+            let serverCode: NSString = signIn.homeServerAuthorizationCode;
+            self.doRequestCallback(serverCode as NSString)
         }
     }
     
