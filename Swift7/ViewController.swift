@@ -85,6 +85,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         var jsonResult = NSJSONSerialization.JSONObjectWithData(responsData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
         
         let googleToken = GoogleToken(access_token: jsonResult.valueForKey("access_token") as String, expires_in: jsonResult.valueForKey("expires_in") as Int, id_token: jsonResult.valueForKey("id_token") as String, refresh_token: jsonResult.valueForKey("refresh_token") as String, token_type: jsonResult.valueForKey("token_type")as String)
+        println(googleToken)
         doRegisterUser(googleToken.access_token)
         
     }
@@ -125,6 +126,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(),completionHandler: {(response, data, err) -> Void in
                 var result = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
             let googleUserInfo = GoogleUserInfo(data:result)
+            println(googleUserInfo)
         })
     }
 

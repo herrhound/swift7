@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GoogleToken {
+class GoogleToken: NSObject {
     var access_token: NSString
     var expires_in: NSInteger
     var id_token: NSString
@@ -22,4 +22,9 @@ class GoogleToken {
         self.refresh_token = refresh_token
         self.token_type = token_type
     }
+    
+    func description() -> String {
+        return NSString(format:"\nGoogleToken {\naccess_token = %@\nexpires_in = %n\nid_token = %@\nrefresh_token = %@\ntoken_type = %@\n}", access_token, expires_in, id_token, refresh_token, token_type)
+    }
+
 }

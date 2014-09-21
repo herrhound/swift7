@@ -8,7 +8,8 @@
 
 import Foundation
 
-class GoogleUserInfo {
+class GoogleUserInfo: NSObject  {
+
     var family_name: NSString
     var gender: NSString
     var given_name: NSString
@@ -27,5 +28,9 @@ class GoogleUserInfo {
         self.link = data.valueForKey("link") as String
         self.locale = data.valueForKey("locale") as String
         self.picture = data.valueForKey("picture") as String
+    }
+    
+    func description() -> String {
+        return NSString(format:"\nGoogleUserInfo {\nname = %@\nfamily_name = %@\ngender = %@\ngiven_name = %@\nid = %@\nlink = %@\nlocale = %@\npicture = %@\n}", name, family_name, gender, given_name, id, link, locale, picture)
     }
 }

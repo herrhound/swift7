@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "validateEmail(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "shouldPerformSegueWithIdentifier(_:sender:)"
             landmarkType = "5">
             <Locations>
@@ -342,11 +342,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
             <Locations>
@@ -388,11 +388,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -468,11 +468,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "finishedWithAuth(_:error:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -484,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "finishedWithAuth(_:error:)"
             landmarkType = "5">
             <Locations>
@@ -530,11 +530,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "finishedWithAuth(_:error:)"
             landmarkType = "5">
             <Locations>
@@ -576,11 +576,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432960714.755158"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "doRequestCallback(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -608,11 +608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "shouldPerformSegueWithIdentifier(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -624,11 +624,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -640,11 +640,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963625.433515"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -672,11 +672,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432960714.755158"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "connection(_:didReceiveData:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -688,11 +688,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432960714.755158"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "connection(_:didReceiveResponse:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -704,11 +704,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432960714.755158"
+            timestampString = "432964333.49389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "doRequestCallback(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -736,12 +736,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift7/ViewController.swift"
-            timestampString = "432963690.13575"
+            timestampString = "432965025.127077"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "doRegister(_:)"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "doRegisterUser(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
