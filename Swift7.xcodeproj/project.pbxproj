@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		F11673631945334F0087A152 /* RegistrationDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11673621945334F0087A152 /* RegistrationDAL.swift */; };
 		F116736719455B2F0087A152 /* BaseDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116736619455B2F0087A152 /* BaseDAL.swift */; };
-		F116E9AB19B9235F006C10A9 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116E9A819B9235F006C10A9 /* GoogleOpenSource.framework */; };
-		F116E9AC19B9235F006C10A9 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116E9A919B9235F006C10A9 /* GooglePlus.framework */; };
-		F116E9AD19B9235F006C10A9 /* GooglePlus.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = F116E9AA19B9235F006C10A9 /* GooglePlus.bundle */; };
 		F116E9AF19B92B65006C10A9 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116E9AE19B92B65006C10A9 /* AddressBook.framework */; };
 		F116E9B119B92B8D006C10A9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116E9B019B92B8D006C10A9 /* AssetsLibrary.framework */; };
 		F116E9B319B92BA1006C10A9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116E9B219B92BA1006C10A9 /* MediaPlayer.framework */; };
@@ -33,6 +30,9 @@
 		F16DD59C194E9AB800B41241 /* Swift7.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F16DD59A194E9AB800B41241 /* Swift7.xcdatamodeld */; };
 		F182F3B91994544C003FE3F6 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F3B81994544C003FE3F6 /* Serializable.swift */; };
 		F182F3BB1994907A003FE3F6 /* UserRegisterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */; };
+		F184A34519D3A690000DD9E4 /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F184A34219D3A690000DD9E4 /* GoogleOpenSource.framework */; };
+		F184A34619D3A690000DD9E4 /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F184A34319D3A690000DD9E4 /* GooglePlus.framework */; };
+		F184A34719D3A690000DD9E4 /* GooglePlus.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = F184A34419D3A690000DD9E4 /* GooglePlus.bundle */; };
 		F193153619943A4C008344B8 /* DeviceRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193153519943A4B008344B8 /* DeviceRegister.swift */; };
 		F1B24EB1199AE03200490DE6 /* NDApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */; };
 		F1B24EB3199AE04700490DE6 /* NDApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */; };
@@ -56,9 +56,6 @@
 /* Begin PBXFileReference section */
 		F11673621945334F0087A152 /* RegistrationDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationDAL.swift; sourceTree = "<group>"; };
 		F116736619455B2F0087A152 /* BaseDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDAL.swift; sourceTree = "<group>"; };
-		F116E9A819B9235F006C10A9 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
-		F116E9A919B9235F006C10A9 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
-		F116E9AA19B9235F006C10A9 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		F116E9AE19B92B65006C10A9 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		F116E9B019B92B8D006C10A9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F116E9B219B92BA1006C10A9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -86,6 +83,9 @@
 		F16DD59B194E9AB800B41241 /* Swift7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swift7.xcdatamodel; sourceTree = "<group>"; };
 		F182F3B81994544C003FE3F6 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		F182F3BA1994907A003FE3F6 /* UserRegisterDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegisterDTO.swift; sourceTree = "<group>"; };
+		F184A34219D3A690000DD9E4 /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
+		F184A34319D3A690000DD9E4 /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
+		F184A34419D3A690000DD9E4 /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
 		F193153519943A4B008344B8 /* DeviceRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceRegister.swift; sourceTree = "<group>"; };
 		F1B24EB0199AE03200490DE6 /* NDApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiRequest.swift; sourceTree = "<group>"; };
 		F1B24EB2199AE04700490DE6 /* NDApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDApiResponse.swift; sourceTree = "<group>"; };
@@ -101,15 +101,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F184A34519D3A690000DD9E4 /* GoogleOpenSource.framework in Frameworks */,
+				F184A34619D3A690000DD9E4 /* GooglePlus.framework in Frameworks */,
+				F184A34719D3A690000DD9E4 /* GooglePlus.bundle in Frameworks */,
 				F116E9B919B92BD5006C10A9 /* CoreMotion.framework in Frameworks */,
 				F116E9B619B92BC2006C10A9 /* CoreGraphics.framework in Frameworks */,
 				F116E9B719B92BC2006C10A9 /* CoreLocation.framework in Frameworks */,
 				F116E9B319B92BA1006C10A9 /* MediaPlayer.framework in Frameworks */,
 				F116E9B119B92B8D006C10A9 /* AssetsLibrary.framework in Frameworks */,
 				F116E9AF19B92B65006C10A9 /* AddressBook.framework in Frameworks */,
-				F116E9AB19B9235F006C10A9 /* GoogleOpenSource.framework in Frameworks */,
-				F116E9AC19B9235F006C10A9 /* GooglePlus.framework in Frameworks */,
-				F116E9AD19B9235F006C10A9 /* GooglePlus.bundle in Frameworks */,
 				F15455911954680200775D0B /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +226,7 @@
 		F15B2B10194404BF006DD4E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F184A34419D3A690000DD9E4 /* GooglePlus.bundle */,
 				F15B2AEE19440395006DD4E0 /* Swift7BKP.xcdatamodeld */,
 				F15B2AF619440395006DD4E0 /* Images.xcassets */,
 				F16DD59A194E9AB800B41241 /* Swift7.xcdatamodeld */,
@@ -252,15 +253,14 @@
 		F1CB869F19A701EF00727891 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F184A34219D3A690000DD9E4 /* GoogleOpenSource.framework */,
+				F184A34319D3A690000DD9E4 /* GooglePlus.framework */,
 				F116E9B819B92BD5006C10A9 /* CoreMotion.framework */,
 				F116E9B419B92BC2006C10A9 /* CoreGraphics.framework */,
 				F116E9B519B92BC2006C10A9 /* CoreLocation.framework */,
 				F116E9B219B92BA1006C10A9 /* MediaPlayer.framework */,
 				F116E9B019B92B8D006C10A9 /* AssetsLibrary.framework */,
 				F116E9AE19B92B65006C10A9 /* AddressBook.framework */,
-				F116E9A819B9235F006C10A9 /* GoogleOpenSource.framework */,
-				F116E9A919B9235F006C10A9 /* GooglePlus.framework */,
-				F116E9AA19B9235F006C10A9 /* GooglePlus.bundle */,
 				F15455901954680200775D0B /* libsqlite3.dylib */,
 			);
 			name = Frameworks;

@@ -16,14 +16,9 @@ class ViewController: UIViewController, GPPSignInDelegate {
     var kServerClientId: NSString = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"
     var kSecret: NSString = "MbSGiXXwLPaanFbJSVseW9qs"
     var responsData: NSMutableData = NSMutableData()
-
-//    static NSString * const kClientId = @"783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com";
-//    static NSString * const kServerClientId = @"783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com";
-//    static NSString * const kSecret = @"MbSGiXXwLPaanFbJSVseW9qs";
+    var credentials: GTMOAuth2Authentication!
     
-    //"692836200741-641qul89di077cprdafcb5qs5caq6fsg.apps.googleusercontent.com"
-    //var authenticated = false
-
+    
     @IBOutlet var lblErrorMsg : UILabel! = nil
     @IBOutlet var texBoxExmail : UITextField! = nil
     @IBOutlet var btnRegisterDevice : UIButton! = nil
@@ -33,34 +28,23 @@ class ViewController: UIViewController, GPPSignInDelegate {
     @IBOutlet var btnGoogleAuthDisconect: UIButton!
     
     
-//    override init(){
-//        super.init()
-//        responsData = null
-//   }
-    
     func disconect() -> Void {
         GPPSignIn.sharedInstance().disconnect()
     }
-    
-    func didDisconnectWithError(error: NSError!) -> Void{
-        if (error != nil) {
-            println("Received error %@", error);
-        } else {
-            // The user is signed out and disconnected.
-            // Clean up user data as specified by the Google+ terms.
-        }
-    }
+//    
+//    func didDisconnectWithError(error: NSError!) -> Void{
+//        if (error != nil) {
+//            println("Received error %@", error);
+//        } else {
+//            // The user is signed out and disconnected.
+//            // Clean up user data as specified by the Google+ terms.
+//        }
+//    }
    
     
     @IBAction func btnGoogleAuthDisconect_TouchUpInside(sender: AnyObject) {
         self.disconect()
     }
-    
-    
-    func presentSignInViewController(viewController: UIViewController){
-        //self.navigationController.pushViewController(viewController, animated:true)
-    }
-    
     
     @IBAction func EditingEmailDidEnd(sender : AnyObject) {
         texBoxExmail.resignFirstResponder()
@@ -70,48 +54,34 @@ class ViewController: UIViewController, GPPSignInDelegate {
         texBoxExmail.resignFirstResponder()
         return;
     }
-    
-    
+        
     @IBAction func btnCancelRegisterDeviceTouchUpInside(sender : AnyObject) {
         texBoxExmail.resignFirstResponder()
         texBoxExmail.text = ""
     }
     
-    
-    func connectionDidFinishLoading(connection: NSURLConnection!) -> Void {
-//        var googleToken : GoogleToken = GoogleToken(JSONString: jsonString)
-        //println("response -> %@", str);
+    func presentSignInViewController(viewController: UIViewController){
+        navigationController?.pushViewController(self, animated:true)
+    }
 
-        var jsonResult = NSJSONSerialization.JSONObjectWithData(responsData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-        
-        let googleToken = GoogleToken(access_token: jsonResult.valueForKey("access_token") as String, expires_in: jsonResult.valueForKey("expires_in") as Int, id_token: jsonResult.valueForKey("id_token") as String, refresh_token: jsonResult.valueForKey("refresh_token") as String, token_type: jsonResult.valueForKey("token_type")as String)
-        println(googleToken)
-        doRegisterUser(googleToken.access_token)
-        
-    }
-    
-    func connection(connection: NSURLConnection, error: NSError!) -> Void {
-        println("%@\n", error.description)
-    }
-    
-    func connection(didReceiveResponse: NSURLConnection!, didReceiveResponse response: NSURLResponse!) -> Void {
-        self.responsData = NSMutableData()
-    }
-    
-    func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) -> Void {
-        responsData.appendData(conData)
-    }
-    
     func doRequestCallback(let code: NSString) {
+        var err: NSError?
         let URLWithString = NSString(format:"https://dry-atoll-6423.herokuapp.com/oauth2callback?code=%@", code)
         let url: NSURL = NSURL(string: URLWithString)
-        var request: NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        var request = NSMutableURLRequest(URL:url)
+
         request.HTTPMethod = "GET"
 
-        request.addValue("text/html", forHTTPHeaderField: "Content-Type")
-        
-        var connection: NSURLConnection = NSURLConnection(request:request, delegate:self)
-        connection.start()
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(),completionHandler: {(response, data, err) -> Void in
+            
+            var jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+            
+            let googleToken = GoogleToken(access_token: jsonResult.valueForKey("access_token") as String, expires_in: jsonResult.valueForKey("expires_in") as Int, id_token: jsonResult.valueForKey("id_token") as String, refresh_token: jsonResult.valueForKey("refresh_token") as String, token_type: jsonResult.valueForKey("token_type")as String)
+            println(googleToken)
+            
+            self.doRegisterUser(googleToken.access_token)
+            
+        })
     }
     
     func doRegisterUser(let access_token: NSString) {
@@ -139,7 +109,6 @@ class ViewController: UIViewController, GPPSignInDelegate {
         }
         else
         {
-            //var code = auth.valueForKey("server_code")
             let signIn = GPPSignIn.sharedInstance()
             let serverCode: NSString = signIn.homeServerAuthorizationCode;
             self.doRequestCallback(serverCode as NSString)
@@ -151,7 +120,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         lblErrorMsg.text = ""
         
         let signIn = GPPSignIn.sharedInstance()
-        signIn.shouldFetchGooglePlusUser = false
+        signIn.shouldFetchGooglePlusUser = true
         
         signIn.clientID = kClientId
         signIn.homeServerClientID = kServerClientId
