@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -16,94 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Amz-WO-XiA">
-                                <rect key="frame" x="40" y="135" width="420" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="EditingEmailDidEnd:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="EE8-c3-U8b"/>
-                                    <action selector="EditingEmailDidEnd:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="Pxr-br-SlG"/>
-                                    <action selector="EditingEmailDidEnd:" destination="vXZ-lx-hvc" eventType="touchCancel" id="ylh-fX-egH"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="420" placeholderIntrinsicHeight="21" text="Please enter your e-mail address..." lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urd-SN-7Vm" propertyAccessControl="none">
-                                <rect key="frame" x="40" y="111" width="420" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qa-Af-5gl" propertyAccessControl="none">
-                                <rect key="frame" x="40" y="168" width="57" height="30"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" button="YES" staticText="YES"/>
-                                </accessibility>
-                                <state key="normal" title="Register">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnRegisterDeviceTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kYU-lT-Qfb"/>
-                                    <segue destination="f5c-o5-oKw" kind="custom" identifier="MainViewSegue" id="wZo-B8-3cT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zur-Ft-OaC" propertyAccessControl="none">
-                                <rect key="frame" x="136" y="168" width="48" height="30"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" button="YES" staticText="YES"/>
-                                </accessibility>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnCancelRegisterDeviceTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cqV-88-QWa"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ih-Rp-MdI">
-                                <rect key="frame" x="40" y="224" width="400" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-hC-TlK" customClass="GPPSignInButton">
-                                <rect key="frame" x="40" y="293" width="101" height="30"/>
-                                <state key="normal" title="Google+ log in">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CG-op-sUR">
-                                <rect key="frame" x="40" y="331" width="111" height="30"/>
-                                <state key="normal" title="Google+ log out">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <rect key="frame" x="215" y="276" width="111" height="30"/>
+                                <state key="normal" title="Google+ log out"/>
                                 <connections>
                                     <action selector="btnGoogleAuthDisconect_TouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ELN-0D-pvz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="signInButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-hC-TlK" customClass="GPPSignInButton">
+                                <rect key="frame" x="40" y="98" width="93" height="48"/>
+                                <state key="normal" image="gpp_sign_in_dark_button_normal.png" backgroundImage="gpp_sign_in_dark_button_normal.png"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please use your Google+ account to sign-in..." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLq-pZ-dBH">
+                                <rect key="frame" x="40" y="46" width="524" height="44"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                    <rect key="frame" x="10" y="20" width="774" height="70"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Amz-WO-XiA" secondAttribute="trailing" constant="20" symbolic="YES" id="bki-nv-mHx"/>
-                            <constraint firstItem="Amz-WO-XiA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="ed4-P1-HLs"/>
-                            <constraint firstItem="Amz-WO-XiA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="p26-FH-CFu"/>
-                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RLq-pZ-dBH"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="RLq-pZ-dBH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="btnCancelRegisterDevice" destination="zur-Ft-OaC" id="91t-0G-Oz4"/>
-                        <outlet property="btnGoogleAuth" destination="nY7-hC-TlK" id="d3g-CT-7bl"/>
                         <outlet property="btnGoogleAuthDisconect" destination="8CG-op-sUR" id="tvS-rC-Wtf"/>
-                        <outlet property="devRegisterView" destination="kh9-bI-dsS" id="iw8-cp-LeX"/>
-                        <outlet property="lblErrorMsg" destination="2ih-Rp-MdI" id="gAK-D3-s01"/>
-                        <outlet property="texBoxExmail" destination="Amz-WO-XiA" id="UPo-KG-MBZ"/>
+                        <outlet property="lblInfo" destination="RLq-pZ-dBH" id="PN6-Zg-a92"/>
+                        <outlet property="signInButton" destination="nY7-hC-TlK" id="ire-CF-cto"/>
+                        <segue destination="f5c-o5-oKw" kind="custom" identifier="MainViewSegue" id="t2u-Cg-YP6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="91" y="75"/>
+            <point key="canvasLocation" x="122.25" y="15"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Wtb-jj-Lvc">
@@ -129,6 +85,9 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="35" y="64" width="730" height="103"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bH-mZ-v9j">
                                 <rect key="frame" x="35" y="197" width="58" height="30"/>
@@ -170,8 +129,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8It-Xc-eDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661" y="75"/>
+            <point key="canvasLocation" x="784" y="-15"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gpp_sign_in_dark_button_normal.png" width="93" height="48"/>
+    </resources>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>

@@ -1,4 +1,4 @@
-//
+	//
 //  AppDelegate.swift
 //  Swift7
 //
@@ -11,12 +11,27 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
+    
     var window: UIWindow?
+    var wrapper: KeychainWrapper!
+    var signIn: GPPSignIn!
+    var kClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
+    
     //var dal = RegistrationDAL()
+    
 
+    func applicationDidFinishLaunching(application: UIApplication)
+    {
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        // Override point for customization after application launch.
+        signIn = GPPSignIn.sharedInstance()
+        signIn.clientID = kClientId
+        wrapper = KeychainWrapper()
+        let viewController : ViewController = self.window?.rootViewController as ViewController
+        viewController.keychain = self.wrapper
+        viewController.signIn = self.signIn
+        
         return true
     }
     
@@ -40,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        println("applicationWillTerminate")
     }
 
 }

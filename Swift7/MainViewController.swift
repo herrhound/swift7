@@ -14,15 +14,18 @@ class MainViewController: UIViewController {
     @IBOutlet var btnDeleteRegistration : UIButton! = nil
     @IBOutlet var btnShowRegistration : UIButton! = nil
     
+    var keychain: KeychainWrapper!
+
     @IBAction func btnDeleteRegistrationTouchUpInside(sender : AnyObject) {
-        let reg = Registration()
-        let success = reg.deleteRegistration()
-        if(success){
-            lblRegInfo.text = "Reggistration deleted!"
-        }
-        else{
-            lblRegInfo.text = "Error while delete reggistration!"
-        }
+        keychain.resetKeychainItem()
+//        let reg = Registration()
+//        let success = reg.deleteRegistration()
+//        if(success){
+//            lblRegInfo.text = "Reggistration deleted!"
+//        }
+//        else{
+//            lblRegInfo.text = "Error while delete reggistration!"
+//        }
     }
     
     
@@ -42,7 +45,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblRegInfo.text = ""
+        //lblRegInfo.text = ""
         // Do any additional setup after loading the view.
     }
 
