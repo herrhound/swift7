@@ -27,9 +27,10 @@ class RegistrationDAL: BaseDAL {
     }
     
     func getAllSettings() -> Array<Settings> {
+        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last! as String
         let opened = openDatabase()
         if(opened){
-            let sql: String = "Select * From Settings Where skey=''"
+            let sql: String = "Select * From Settings"
             let result = processSelectStatement(sql)
             let array = result as Array<Settings>
             closeDatabase();

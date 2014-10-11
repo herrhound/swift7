@@ -11,9 +11,7 @@ import Security
 
 //class GPPSignInButton
 
-class ViewController: UIViewController, GPPSignInDelegate {
-    
-    
+class ViewController: UIViewController, GPPSignInDelegate {    
     //var signIn: GPPSignIn
     //var kClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
     var kServerClientId: NSString = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"

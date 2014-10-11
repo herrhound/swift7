@@ -20,16 +20,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //var dal = RegistrationDAL()
     
 
-    func applicationDidFinishLaunching(application: UIApplication)
+    func appDidFinishLaunching(application: UIApplication)
     {
+        let a = true
+        #if DEBUG
+            println("DEBUG")
+        #endif
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        signIn = GPPSignIn.sharedInstance()
-        signIn.clientID = kClientId
         wrapper = KeychainWrapper()
         let viewController : ViewController = self.window?.rootViewController as ViewController
         viewController.keychain = self.wrapper
+
+//        var gc = GoogleCredentials()
+//        gc.credentialId = 1
+//        gc.kClientId = "ClientId"
+//        gc.kServerClientId = "ServerClientId"
+//        gc.kSecret = "Secret"
+//        
+//        if wrapper.ObjectForKey(kSecValuePersistentRef as AnyObject) == nil
+//        {
+//            wrapper.SetObject(gc, forKey: kSecValuePersistentRef)
+//        }
+//        
+        signIn = GPPSignIn.sharedInstance()
+        signIn.clientID = kClientId
         viewController.signIn = self.signIn
         
         return true
