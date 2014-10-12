@@ -18,12 +18,18 @@ class BaseViewController: UIViewController {
     
     func showAlertView()
     {
-        alerttView.hidden = false
+        if(alerttView != nil)
+        {
+            alerttView.hidden = false
+        }
     }
     
     func hideAlertView()
     {
-        alerttView.hidden = true
+        if(alerttView != nil)
+        {
+            alerttView.hidden = true
+        }
     }
     
     func isConnectedToNetwork() -> Bool {

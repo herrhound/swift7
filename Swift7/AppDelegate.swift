@@ -59,9 +59,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         wrapper = KeychainWrapper()
         let viewController : ViewController = self.window?.rootViewController as ViewController
         viewController.keychain = self.wrapper
-
+        if(!viewController.isConnectedToNetwork())
+        {
+            return false
+        }
+        
         getGoogleCredentials()
-
+            
         signIn = GPPSignIn.sharedInstance()
         signIn.clientID = self.googleCredentials.kClientId
         viewController.signIn = self.signIn
