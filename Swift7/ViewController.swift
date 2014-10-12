@@ -11,13 +11,13 @@ import Security
 
 //class GPPSignInButton
 
-class ViewController: UIViewController, GPPSignInDelegate {    
+class ViewController: BaseViewController, GPPSignInDelegate {
     //var signIn: GPPSignIn
     //var kClientId: NSString = "783241267105-s1si6l0t9h1dat18gih2j5bphg7st307.apps.googleusercontent.com"
-    var kServerClientId: NSString = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"
-    var kSecret: NSString = "MbSGiXXwLPaanFbJSVseW9qs"
-    var responsData: NSMutableData = NSMutableData()
-    var credentials: GTMOAuth2Authentication! = nil
+    //var kServerClientId: NSString = "783241267105-bc7pq09tr1nnogat72r9tgmaeg2mre28.apps.googleusercontent.com"
+    //var responsData: NSMutableData = NSMutableData()
+    //var credentials: GTMOAuth2Authentication! = nil
+    
     var signIn: GPPSignIn! // = GPPSignIn.sharedInstance()
     var keychain: KeychainWrapper!
     var spinner: UIActivityIndicatorView!
@@ -35,7 +35,7 @@ class ViewController: UIViewController, GPPSignInDelegate {
         self.view.addSubview(self.spinner)
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required override init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -134,8 +134,17 @@ class ViewController: UIViewController, GPPSignInDelegate {
         self.lblInfo.numberOfLines = 0
     }
     
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        if(!self.hasInternetConnection) {
+            return
+        }
+
         initSpinner()
 
         if((keychain.ObjectForKey(kSecValueData as AnyObject)) as NSString == ""){
@@ -143,8 +152,8 @@ class ViewController: UIViewController, GPPSignInDelegate {
             self.signIn.delegate = self;
             self.signIn.shouldFetchGooglePlusUser = true
             
-            //self.signIn.clientID = kClientId
-            self.signIn.homeServerClientID = kServerClientId
+            self.signIn.clientID = self.googleCredentials.kClientId
+            self.signIn.homeServerClientID = self.googleCredentials.kServerClientId
             
             self.signIn.scopes = [kGTLAuthScopePlusLogin]
             

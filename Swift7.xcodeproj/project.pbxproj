@@ -41,6 +41,9 @@
 		F1DC1D5519E80DE90007A2A4 /* GoogleCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC1D5419E80DE90007A2A4 /* GoogleCredentials.swift */; };
 		F1DC1D5719E80FE30007A2A4 /* GoogleDataDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC1D5619E80FE20007A2A4 /* GoogleDataDAL.swift */; };
 		F1DC1D5819E8BA7E0007A2A4 /* Swift7.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F1BB8445199AC9EC00528DA1 /* Swift7.sqlite */; };
+		F1DC1D5A19E9CCBE0007A2A4 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC1D5919E9CCBE0007A2A4 /* AlertViewController.swift */; };
+		F1DC1D5C19E9D53F0007A2A4 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC1D5B19E9D53F0007A2A4 /* BaseController.swift */; };
+		F1DC1D5E19EA21950007A2A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DC1D5D19EA21950007A2A4 /* SystemConfiguration.framework */; };
 		F1DD754B19D51F46005EA529 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DD754A19D51F46005EA529 /* KeychainService.swift */; };
 		F1DD755119D61C65005EA529 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F1DD754F19D61C65005EA529 /* KeychainWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F1E1A66119CE54AE0040F74B /* GoogleToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E1A66019CE54AE0040F74B /* GoogleToken.swift */; };
@@ -98,6 +101,9 @@
 		F1BB8445199AC9EC00528DA1 /* Swift7.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Swift7.sqlite; sourceTree = "<group>"; };
 		F1DC1D5419E80DE90007A2A4 /* GoogleCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCredentials.swift; sourceTree = "<group>"; };
 		F1DC1D5619E80FE20007A2A4 /* GoogleDataDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataDAL.swift; sourceTree = "<group>"; };
+		F1DC1D5919E9CCBE0007A2A4 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		F1DC1D5B19E9D53F0007A2A4 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		F1DC1D5D19EA21950007A2A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F1DD754A19D51F46005EA529 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		F1DD754F19D61C65005EA529 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		F1DD755019D61C65005EA529 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1DC1D5E19EA21950007A2A4 /* SystemConfiguration.framework in Frameworks */,
 				F184A34519D3A690000DD9E4 /* GoogleOpenSource.framework in Frameworks */,
 				F184A34619D3A690000DD9E4 /* GooglePlus.framework in Frameworks */,
 				F184A34719D3A690000DD9E4 /* GooglePlus.bundle in Frameworks */,
@@ -198,6 +205,8 @@
 			children = (
 				F15B2AF119440395006DD4E0 /* ViewController.swift */,
 				F15B2B111944DF73006DD4E0 /* MainViewController.swift */,
+				F1DC1D5919E9CCBE0007A2A4 /* AlertViewController.swift */,
+				F1DC1D5B19E9D53F0007A2A4 /* BaseController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 		F1CB869F19A701EF00727891 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1DC1D5D19EA21950007A2A4 /* SystemConfiguration.framework */,
 				F184A34219D3A690000DD9E4 /* GoogleOpenSource.framework */,
 				F184A34319D3A690000DD9E4 /* GooglePlus.framework */,
 				F116E9B819B92BD5006C10A9 /* CoreMotion.framework */,
@@ -398,6 +408,7 @@
 				F1DD754B19D51F46005EA529 /* KeychainService.swift in Sources */,
 				F1DC1D5719E80FE30007A2A4 /* GoogleDataDAL.swift in Sources */,
 				F182F3BB1994907A003FE3F6 /* UserRegisterDTO.swift in Sources */,
+				F1DC1D5C19E9D53F0007A2A4 /* BaseController.swift in Sources */,
 				F193153619943A4C008344B8 /* DeviceRegister.swift in Sources */,
 				F1B24EB1199AE03200490DE6 /* NDApiRequest.swift in Sources */,
 				F1E1A66319CE56E20040F74B /* Deserializable.swift in Sources */,
@@ -405,6 +416,7 @@
 				F154559419546DEF00775D0B /* SqliteDatabase.m in Sources */,
 				F1B24EB5199B00D600490DE6 /* NDApiRequestSender.swift in Sources */,
 				F116736719455B2F0087A152 /* BaseDAL.swift in Sources */,
+				F1DC1D5A19E9CCBE0007A2A4 /* AlertViewController.swift in Sources */,
 				F1E1A66519CE7E130040F74B /* GoogleUserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
 
     @IBOutlet var lblRegInfo : UILabel! = nil
     @IBOutlet var btnDeleteRegistration : UIButton! = nil

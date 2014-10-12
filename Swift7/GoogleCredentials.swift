@@ -9,29 +9,26 @@
 import Foundation
 
 class GoogleCredentials {
-    var credentialId: Int //NSInteger
     var kClientId: String //NSString
     var kServerClientId: String //NSString
-    var kSecret: String //NSString
     
     
     init(){
-        credentialId = 0
         kClientId = ""
         kServerClientId = ""
-        kSecret = ""
     }
     
-    /*
-    init(credentialId: NSInteger, kClientId: NSString, kServerClientId: NSString, kSecret: NSString) {
-        self.credentialId = credentialId
+    init(data: NSDictionary){
+        self.kClientId = data.valueForKey("client_id") as String
+        self.kServerClientId = data.valueForKey("server_id") as String
+    }
+    
+    init(kClientId: NSString, kServerClientId: NSString) {
         self.kClientId = kClientId
         self.kServerClientId = kServerClientId
-        self.kSecret = kSecret
     }
     
     func description() -> String {
-        return NSString(format:"\nGoogleCredentials {\ncredentialId = %n\nkClientId = %@\nkServerClientId = %@\nkSecret = %@\n}", credentialId, kClientId, kServerClientId, kSecret)
+        return NSString(format:"\nGoogleCredentials {\nkClientId = %@\nkServerClientId = %@\n}", kClientId, kServerClientId)
     }
-    */
 }

@@ -61,6 +61,60 @@
             </objects>
             <point key="canvasLocation" x="122.25" y="15"/>
         </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="ZTJ-pM-vxI">
+            <objects>
+                <viewController id="9MP-0y-emY" customClass="AlertViewController" customModule="Swift7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yqw-Ih-ail"/>
+                        <viewControllerLayoutGuide type="bottom" id="NS8-iN-Klt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="MainStoryboard" id="OHN-ti-Po0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Internet Connection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fc-bX-bJg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="2" width="188" height="22"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bua-ja-eXN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="ic_remove_black_16.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="2" width="24" height="24"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1Fc-bX-bJg"/>
+                                <exclude reference="bua-ja-eXN"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="1Fc-bX-bJg"/>
+                                <include reference="bua-ja-eXN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="btnHideAlert" destination="bua-ja-eXN" id="bEg-B5-ojm"/>
+                        <outlet property="lblAlert" destination="1Fc-bX-bJg" id="zVa-9P-0mw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fpy-gV-PPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180.75" y="812.25"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="Wtb-jj-Lvc">
             <objects>
@@ -134,6 +188,7 @@
     </scenes>
     <resources>
         <image name="gpp_sign_in_dark_button_normal.png" width="93" height="48"/>
+        <image name="ic_remove_black_16.png" width="16" height="16"/>
     </resources>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>
